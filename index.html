@@ -16,7 +16,7 @@
 
                 <button id="menu-burg"><i class="fa-solid fa-bars"></i></button>
                 
-            <nav class="menu-pc">
+            <nav id="menu-pc" class="menu-pc">
                 <button id="exit-menu-burg">
                     <i class="fa-solid fa-x"></i>
                 </button>
@@ -29,7 +29,30 @@
                 </div>
             </nav>
         </section>
+        <section class="banner">
+            <div class="caixa-texto">
+                <p class="destaque">Olá, eu sou</p>
+                <h1 class="titulo">João Victor Souza</h1>
+                <h2 class="titulo, destaque">Desenvolvedor Front-End</h2>
+                <p class="texto">Faço sites modernos, responsivos e com foco na melhor experiencia para o usuario.</p>
+            </div>
+        </section>
         
     </header>
+    
+    <script>
+        var menuBurg = document.getElementById('menu-burg')
+        var menuExit = document.getElementById('exit-menu-burg')
+        var menuPc = document.getElementById('menu-pc')
+
+        menuBurg.addEventListener('click', () => {
+            (menuPc.classList.toggle('ativo'))
+        })
+
+        menuExit.addEventListener('click', () => {
+            (menuPc.classList.toggle('ativo'))
+        })
+
+    </script>
 </body>
 </html>
