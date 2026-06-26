@@ -63,7 +63,8 @@ a {
     color: var(--destaque);
     border: solid 2px var(--destaque);
 
-    transition: transform .3s ease;
+    transition: transform .3s ease,
+                background .3s ease;
 }
 
 .botao-inverso i {
@@ -72,6 +73,9 @@ a {
 
 .botao-inverso:hover {
     transform: scale(1.02);
+    background-color: var(--menu);
+    
+    
 }
 
 .logo img {
@@ -182,7 +186,6 @@ a {
     max-width: 400px;
     font-size: 1em;
     font-weight: bolder;
-    line-height: 2.2em;
 
     display: flex;
     flex-direction: column;
@@ -218,7 +221,7 @@ a {
 }
 
 main h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 20px;
 
     display: flex;
@@ -228,18 +231,22 @@ main h1 {
 
 main h1 > i {
     color: var(--destaque);
-    font-size: 1em;
+    font-size: .8em;
 }
 
-.sobre {
+.card-section {
     background-color: var(--fundo-card);
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 20px;
+    padding: 20px;
+    padding-bottom: 40px;
+    margin: 40px 20px;
 
     display: flex;
     flex-direction: column;
+}
 
-    padding: 20px;
-    padding-bottom: 40px;
+.sobre {
+    border-radius: 0px 0px 20px 20px;
     margin: 0px 20px;
 }
 
@@ -257,21 +264,102 @@ main h1 > i {
 }
 
 .habilidades {
-    background-color: var(--fundo-card);
+    background-color: var(--menu);
     border-radius: 20px;
 
-    display: flex;
-    flex-direction: column;
-
-    padding: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     margin: 40px 20px;
 }
 
+.habilidades h1 {
+    padding: 20px;
+}
 
-/* .github {
+.habilidades .container {
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.habilidades .card {
+    width: 70px;
+    height: 80px;
+    font-size: .6em;
+    border: solid 1px var(--letra);
+    border-radius: 5px;
+
+    padding: 5px;
+    padding-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.habilidades .card img {
+    width: 30px;
+}
+
+.github {
     background-color: white;
     border-radius: 50%;
-} */
+}
 
+.projetos {
+    display: flex;
 
+    margin: 40px 20px;
+}
+
+.projetos .caixa-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projetos h3 {
+    font-size: 1.3em;
+}
+
+.cod {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.cod .html, .css, .js {
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.cod .html {
+    border: solid 1px #f1622e;
+    color: #f1622e;
+}
+
+.cod .css {
+    border: solid 1px #5ddfff;
+    color: #5ddfff;
+}
+
+.cod .js {
+    border: solid 1px #ffff6d;
+    color: #ffff6d;
+}
+
+.projetos .botao-inverso {
+    width: max-content;
+    padding: 10px 40px;
+}
+
+.contato .caixa-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
