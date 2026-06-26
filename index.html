@@ -3,56 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
+    <title>Portfólio</title>
     <link rel="stylesheet" href="/estilos/style.css">
     <script src="https://kit.fontawesome.com/ac52fd1507.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <section class="menu">
+        <nav class="menu">
             <div class="logo">
-                <img src="imagens/logo-js-tranparente.png" alt="">
+                <img src="/imagens/logos/logo-js-tranparente.png" alt="Logo Joao Victor Souza">
             </div>
 
-                <button id="menu-burg"><i class="fa-solid fa-bars"></i></button>
+            <button id="menu-burg"><i class="fa-solid fa-bars"></i></button>
                 
-            <nav id="menu-pc" class="menu-pc">
+            <div id="menu-pc" class="menu-pc">
                 <button id="exit-menu-burg">
                     <i class="fa-solid fa-x"></i>
                 </button>
-                <div class="opcoes">
-                    <a href="#">Inicio</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Projetos</a>
-                    <a href="#">Habilidades</a>
-                    <a href="#">Contato</a>
-                </div>
-            </nav>
-        </section>
+                <ul class="opcoes">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Habilidades</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
         <section class="banner">
             <div class="caixa-texto">
                 <p class="destaque">Olá, eu sou</p>
                 <h1 class="titulo">João Victor Souza</h1>
-                <h2 class="titulo, destaque">Desenvolvedor Front-End</h2>
-                <p class="texto">Faço sites modernos, responsivos e com foco na melhor experiencia para o usuario.</p>
+                <h2 class="titulo destaque">Desenvolvedor Front-End</h2>
+                <p class="texto">Desenvolvo sites modernos, responsivos e focados em desempenho e na melhor experiência do usuário.</p>
+                <div class="botoes">
+                    <a href="#" class="botao">Ver Projetos<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#" class="botao-inverso">Baixar Currículo<i class="fa-solid fa-download"></i></a>
+                </div>
+                <div class="perfil">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                </div>
             </div>
         </section>
-        
     </header>
+    <main>
+        <section class="sobre">
+            <h1 class="titulo destaque"><i class="fa-solid fa-star"></i>SOBRE MIM</h1>
+            <div class="caixa-texto">
+                <h2 class="titulo">Um pouco sobre mim</h2>
+                <p class="texto">Sou desenvolvedor Front-End em formação apaixonado por transformar ideias em interfaces modernas, bonitas e funcionais. Sempre buscando aprender coisas novas e evoluir como dev.</p>
+            </div>
+            <a class="botao-inverso" href="#">Saiba mais sobre mim</a>
+        </section>
+        <section class="habilidades">
+            <h1 class="titulo destaque"><i class="fa-solid fa-star"></i>MINHAS HABILIDADES</h1>
+            
+            <!-- <div class="container">
+                <article class="card">
+                    <img src="imagens/logos/logo-html.svg" alt="">
+                    <h3 class="titulo">HTML-5</h3>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/logos/logo-css.svg" alt="">
+                    <h3 class="titulo">CSS</h3>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/logos/logo-js.svg" alt="">
+                    <h3 class="titulo">JavaScript</h3>
+                </article>
+                
+                <article class="card">
+                    <img src="imagens/logos/logo-git.svg" alt="">
+                    <h3 class="titulo">Git</h3>
+                </article>
+
+                <article class="card">
+                    <img class="github" src="imagens/logos/logo-github.svg" alt="">
+                    <h3 class="titulo">GitHub</h3>
+                </article>
+            </div> -->
+        </section>
+    </main>
     
     <script>
-        var menuBurg = document.getElementById('menu-burg')
-        var menuExit = document.getElementById('exit-menu-burg')
-        var menuPc = document.getElementById('menu-pc')
+        const menuBurg = document.getElementById('menu-burg')
+        const menuExit = document.getElementById('exit-menu-burg')
+        const menuPc = document.getElementById('menu-pc')
 
         menuBurg.addEventListener('click', () => {
-            (menuPc.classList.toggle('ativo'))
+            menuPc.classList.toggle('ativo')
         })
 
         menuExit.addEventListener('click', () => {
-            (menuPc.classList.toggle('ativo'))
+            menuPc.classList.toggle('ativo')
         })
-
     </script>
 </body>
 </html>

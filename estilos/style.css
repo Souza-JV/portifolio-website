@@ -2,13 +2,28 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap');
 
-
 :root {
     --destaque: #6156F0;
     --letra: #e0e0e0;
     --fundo: #0A111C;
     --fundo-card: #121A28;
-    --menu: #090E19;
+    --menu: #050a14;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: "Nunito", sans-serif;
+    background-color: var(--fundo);
+}
+
+a {
+    color: white;
 }
 
 .titulo {
@@ -23,16 +38,40 @@
     color: var(--letra);
 }
 
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    color: white;
+.botao, .botao-inverso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    padding: 12px 18px;
+    text-decoration: none;
 }
 
-body {
-    font-family: "Nunito", sans-serif;
-    background-color: var(--fundo);
+.botao {
+    background-color: var(--destaque);
+    transition: transform .3s ease,
+                opacity .3s ease;
+}
+
+.botao:hover {
+    transform: scale(1.02);
+    opacity: .9;
+}
+
+.botao-inverso {
+    color: var(--destaque);
+    border: solid 2px var(--destaque);
+
+    transition: transform .3s ease;
+}
+
+.botao-inverso i {
+    color: var(--destaque);
+}
+
+.botao-inverso:hover {
+    transform: scale(1.02);
 }
 
 .logo img {
@@ -41,13 +80,11 @@ body {
 
 .menu {
     background-color: var(--menu);
+    padding: 0px 30px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding-left: 20px;
-    padding-right: 30px;
 }
 
 #menu-burg {
@@ -68,22 +105,21 @@ body {
     background-color: var(--menu);
     color: white;
     height: 100%;
-    padding: 40px;
-    padding-top: 100px;
+    padding: 100px 40px;
 
     display: flex;
     flex-direction: column;
 
+    transform:translateX(100%);
     position: fixed;
-    right: -250px;
+    right: 0;
     top: 0;
 
-    transition: right .3s ease;
+    transition: transform .3s ease;
 }
 
 .menu-pc.ativo {
-    position: absolute;
-    right: 0;
+    transform:translateX(0);
 }
 
 #exit-menu-burg {
@@ -106,12 +142,16 @@ body {
     cursor: pointer;
 }
 
+.menu-pc .opcoes {
+    list-style: none;
+}
+
 .menu-pc a {
     font-size: 1.5em;
+    text-decoration: none;
 
     display: flex;
     color: white;
-    text-decoration: none;
 
     padding: 10px;
 
@@ -125,16 +165,113 @@ body {
 }
 
 .banner {
-    margin-left: 30px;
-    margin-right: 30px;
-    padding-top: 50px;
+    background-image: linear-gradient(to right, var(--fundo), transparent), url(/imagens/banner-projeto.png);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+
+
+    display: flex;
+
+    margin: 0px 20px;
+    padding: 40px 20px;
 }
 
-.banenr .caixa-texto {
-    font-size: .8em;
+.banner .caixa-texto {
+    max-width: 400px;
+    font-size: 1em;
     font-weight: bolder;
     line-height: 2.2em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
+.banner .titulo {
+    font-size: 2.5em;
+}
+
+.banner .botoes {
+    margin-top: 40px;
+    width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.banner .botoes a {
+    gap: 10px;
+}
+
+.banner .perfil {
+    font-size: 1.7em;
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: row;
+    
+    gap: 20px;
+    transition: opacity .3s ease;
+}
+
+main h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main h1 > i {
+    color: var(--destaque);
+    font-size: 1em;
+}
+
+.sobre {
+    background-color: var(--fundo-card);
+    border-radius: 0px 0px 20px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    padding-bottom: 40px;
+    margin: 0px 20px;
+}
+
+.sobre .caixa-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sobre .botao-inverso {
+    width: max-content;
+    margin-top: 40px;
+    font-size: 1.2em;
+    padding: 12px 18px;
+}
+
+.habilidades {
+    background-color: var(--fundo-card);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    padding-bottom: 40px;
+    margin: 40px 20px;
+}
+
+
+/* .github {
+    background-color: white;
+    border-radius: 50%;
+} */
 
 
