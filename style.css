@@ -358,8 +358,47 @@ main h1 > i {
     padding: 10px 40px;
 }
 
+.contato {
+    background-color: var(--fundo-card);
+    padding: 40px;
+}
+
 .contato .caixa-texto {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.contato .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato .card {
+    margin: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.whats, .email {
+    font-size: 1.5em;  
+    background-color: var(--fundo);
+    color: var(--destaque);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.whats {
+    color: #00a100;
+}
+
+footer {
+    background-color: var(--menu);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
